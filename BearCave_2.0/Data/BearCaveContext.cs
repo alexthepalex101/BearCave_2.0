@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BearCave_2._0.Models;
 
-namespace BearCave_2._0.Models
+namespace BearCave_2._0.Data //change to .models if this doesn't work, alex.
 {
     public class BearCaveContext : DbContext
     {

@@ -14,7 +14,7 @@ namespace BearCave_2._0.Data
             {
                 context.Database.EnsureCreated();
 
-                // Look for any students.
+                // Look for any clients.
                 if (context.Clients.Any())
                 {
                     return;   // DB has been seeded
@@ -58,20 +58,21 @@ namespace BearCave_2._0.Data
                 var units = new Unit[]
                 {
                    //I put the unit IDs manually to test if 'autoid' works when I input
-                   //data from the create page of the site.
+                   //data from the create page of the site. 
+                   // I have removed them since then.
             
-            new Unit{UnitID=1, DoorNum=1, Floor=1, DefaultRent=600, CurrentRent=600},
-            new Unit{UnitID=2, DoorNum=2, Floor=1, DefaultRent=600, CurrentRent=600},
-            new Unit{UnitID=3, DoorNum=3, Floor=1, DefaultRent=600, CurrentRent=600},
-            new Unit{UnitID=4, DoorNum=4, Floor=1, DefaultRent=600, CurrentRent=600},
-            new Unit{UnitID=5, DoorNum=5, Floor=1, DefaultRent=600, CurrentRent=600},
-            new Unit{UnitID=6, DoorNum=6, Floor=1, DefaultRent=600, CurrentRent=600},
-            new Unit{UnitID=7, DefaultRent=1000, CurrentRent=1050},
-            new Unit{UnitID=8, DefaultRent=1000, CurrentRent=1050},
-            new Unit{UnitID=9, DefaultRent=1000, CurrentRent=1050},
-            new Unit{UnitID=10, DefaultRent=1000, CurrentRent=1050},
-            new Unit{UnitID=11, DefaultRent=1000, CurrentRent=1050},
-            new Unit{UnitID=12, DefaultRent=1000, CurrentRent=1050},
+            new Unit{DoorNum=1, Floor=1, DefaultRent=600, CurrentRent=600},
+            new Unit{DoorNum=2, Floor=1, DefaultRent=600, CurrentRent=600},
+            new Unit{DoorNum=3, Floor=1, DefaultRent=600, CurrentRent=600},
+            new Unit{DoorNum=4, Floor=1, DefaultRent=600, CurrentRent=600},
+            new Unit{DoorNum=5, Floor=1, DefaultRent=600, CurrentRent=600},
+            new Unit{DoorNum=6, Floor=1, DefaultRent=600, CurrentRent=600},
+            new Unit{DefaultRent=1000, CurrentRent=1050},
+            new Unit{DefaultRent=1000, CurrentRent=1050},
+            new Unit{DefaultRent=1000, CurrentRent=1050},
+            new Unit{DefaultRent=1000, CurrentRent=1050},
+            new Unit{DefaultRent=1000, CurrentRent=1050},
+            new Unit{DefaultRent=1000, CurrentRent=1050},
                 };
                 foreach (Unit c in units)
                 {
@@ -81,6 +82,9 @@ namespace BearCave_2._0.Data
 
                 var properties = new Property[]
                 {
+            //I input ID manually here when I built the DB, however I have since removed it and tried to build the 
+            // database again, however I had no luck. I believe I'll have to delete the tables. I'm not going to 
+            // do that as there is no apparent benefit for doing so
             new Property{PropertyType="Flat", Address="Manor House, 9 Street Street", City="Oleander", County="Soil", Postcode="MM18 U92"},
             new Property{PropertyType="House", Address="Address A", City="City A", County="County A", Postcode="XX01 X01"},
             new Property{PropertyType="House", Address="Address B", City="City B", County="County B", Postcode="XX02 X01"},
